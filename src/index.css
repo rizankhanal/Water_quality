@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Full height fix for Leaflet */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Map container */
+.map-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #1e293b;
+}
+
+/* Leaflet styles */
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 1;
+  background-color: #1e293b !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-popup-tip {
+  background: white;
+}
+
+.custom-div-icon,
+.leaflet-div-icon {
+  background: none;
+  border: none;
+}
+
+/* Zoom controls */
+.leaflet-control-container .leaflet-control {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-control-zoom a {
+  color: #1e293b !important;
+  border: none !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Optional visual styles */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+.no-transition {
+  transition: none !important;
+}
+
+.leaflet-tile {
+  filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
+}
+
+.leaflet-control-attribution {
+  background: rgba(0, 0, 0, 0.5) !important;
+  color: white !important;
+}
+
+.leaflet-control-attribution a {
+  color: #60a5fa !important;
+}
