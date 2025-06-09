@@ -112,7 +112,7 @@ export function Community() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
           <p className="text-slate-300">Loading community data...</p>
         </div>
       </div>
@@ -138,8 +138,8 @@ export function Community() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
             <div className="flex items-center">
-              <div className="p-3 bg-blue-600/20 rounded-lg mr-4">
-                <Droplets className="h-6 w-6 text-blue-400" />
+              <div className="p-3 bg-primary/20 rounded-lg mr-4">
+                <Droplets className="h-6 w-6 text-primary" />
               </div>
               <div>
                 <p className="text-2xl font-bold text-white">{uploads.length}</p>
@@ -186,7 +186,7 @@ export function Community() {
                 <input
                   type="text"
                   placeholder="Search by location or username..."
-                  className="w-full pl-10 pr-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full pl-10 pr-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
@@ -194,7 +194,7 @@ export function Community() {
             </div>
             
             <select
-              className="px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary"
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as any)}
             >
@@ -205,7 +205,7 @@ export function Community() {
             </select>
             
             <select
-              className="px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary"
               value={filterBy}
               onChange={(e) => setFilterBy(e.target.value as any)}
             >

@@ -8,13 +8,14 @@ import {
   ArrowRight
 } from 'lucide-react'
 import { useAuth } from '../hooks/useAuth'
+import logo2 from '../assets/logo2.png'
 
 export function Home() {
   const { user } = useAuth()
 
   const features = [
     {
-      icon: <MapPin className="h-8 w-8 text-blue-400" />,
+      icon: <MapPin className="h-8 w-8 text-primary" />,
       title: 'Interactive Maps',
       description: 'Visualize water quality data across Nepal with our interactive mapping system.'
     },
@@ -32,7 +33,7 @@ export function Home() {
 
   const wqiLevels = [
     { range: '0-25', label: 'Excellent', color: 'bg-green-500', description: 'Safe for all uses' },
-    { range: '26-50', label: 'Good', color: 'bg-blue-500', description: 'Suitable for most uses' },
+    { range: '26-50', label: 'Good', color: 'bg-primary', description: 'Suitable for most uses' },
     { range: '51-75', label: 'Poor', color: 'bg-yellow-500', description: 'Treatment required' },
     { range: '76-100', label: 'Very Poor', color: 'bg-red-500', description: 'Unsafe for consumption' }
   ]
@@ -41,16 +42,14 @@ export function Home() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-purple-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
           <div className="flex justify-center mb-8">
-            <div className="p-4 bg-blue-600/20 rounded-full">
-              <Droplets className="h-16 w-16 text-blue-400" />
-            </div>
+            <img src={logo2} alt="Nephranet Logo" className="h-16 w-16 object-contain" />
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Monitor Water Quality
-            <span className="text-blue-400 block">Across Nepal</span>
+            <span className="text-primary block">Across Nepal</span>
           </h1>
           <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
             Join our community-driven platform to monitor, analyze, and improve water quality
@@ -60,7 +59,7 @@ export function Home() {
             {user ? (
               <Link
                 to="/upload"
-                className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="inline-flex items-center px-8 py-4 bg-primary hover:bg-primary/80 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 Start Contributing
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -69,7 +68,7 @@ export function Home() {
               <>
                 <Link
                   to="/signup"
-                  className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  className="inline-flex items-center px-8 py-4 bg-primary hover:bg-primary/80 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
                   Get Started
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -125,7 +124,7 @@ export function Home() {
             {features.map((feature, i) => (
               <div
                 key={i}
-                className="group bg-slate-800 rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300 transform hover:scale-105"
+                className="group bg-slate-800 rounded-xl p-8 border border-slate-700 hover:border-primary transition-all duration-300 transform hover:scale-105"
               >
                 <div className="mb-6">{feature.icon}</div>
                 <h3 className="text-2xl font-semibold mb-4">{feature.title}</h3>
@@ -164,7 +163,7 @@ export function Home() {
               }
             ].map((item, idx) => (
               <div key={idx}>
-                <div className={`bg-${['blue', 'green', 'purple'][idx]}-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-6 mx-auto`}>
+                <div className={`bg-${['primary','green','purple'][idx]}-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-6 mx-auto`}>
                   {item.step}
                 </div>
                 <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
@@ -185,7 +184,7 @@ export function Home() {
           {!user && (
             <Link
               to="/signup"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary to-purple-600 hover:from-primary/80 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Join NephraNet Today
               <ArrowRight className="ml-2 h-5 w-5" />

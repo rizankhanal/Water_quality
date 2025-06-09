@@ -30,7 +30,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors">
+            <Link to="/" className="flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors">
               <img src={logo} alt="Nephranet Logo" className="h-8 w-8 object-contain" />
               <span className="text-xl font-bold">NephraNet</span>
             </Link>
@@ -66,7 +66,7 @@ export function Navbar() {
                 </Link>
                 <Link
                   to="/signup"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
+                  className="bg-primary hover:bg-primary/80 text-white px-4 py-2 rounded-lg transition-colors"
                 >
                   Sign Up
                 </Link>
@@ -119,7 +119,7 @@ export function Navbar() {
                   </Link>
                   <Link
                     to="/signup"
-                    className="block px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors mx-3"
+                    className="block px-3 py-2 bg-primary hover:bg-primary/80 text-white rounded-lg transition-colors mx-3"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Sign Up

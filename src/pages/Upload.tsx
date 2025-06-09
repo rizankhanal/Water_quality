@@ -108,8 +108,8 @@ export function Upload() {
             <img src={logo} alt="Nephranet Logo" className="h-20 w-20 object-contain" />
           </div>
           <div className="flex justify-center mb-6">
-            <div className="p-3 bg-blue-600/20 rounded-full">
-              <UploadIcon className="h-12 w-12 text-blue-400" />
+            <div className="p-3 bg-primary/20 rounded-full">
+              <UploadIcon className="h-12 w-12 text-primary" />
             </div>
           </div>
           <h1 className="text-3xl font-bold text-white mb-4">Upload Water Quality Data</h1>
@@ -129,7 +129,7 @@ export function Upload() {
                 type="text"
                 id="location"
                 required
-                className="block w-full px-4 py-3 border border-slate-600 bg-slate-700 text-white placeholder-slate-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="block w-full px-4 py-3 border border-slate-600 bg-slate-700 text-white placeholder-slate-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                 placeholder="e.g., Kathmandu, Pokhara, Chitwan"
                 value={formData.location}
                 onChange={(e) => setFormData(prev => ({ ...prev, location: e.target.value }))}
@@ -152,7 +152,7 @@ export function Upload() {
                   min="0"
                   max="14"
                   required
-                  className="block w-full px-4 py-3 border border-slate-600 bg-slate-700 text-white placeholder-slate-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="block w-full px-4 py-3 border border-slate-600 bg-slate-700 text-white placeholder-slate-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                   placeholder="0.0 - 14.0"
                   value={formData.ph}
                   onChange={(e) => setFormData(prev => ({ ...prev, ph: e.target.value }))}
@@ -173,7 +173,7 @@ export function Upload() {
                   step="0.1"
                   min="0"
                   required
-                  className="block w-full px-4 py-3 border border-slate-600 bg-slate-700 text-white placeholder-slate-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="block w-full px-4 py-3 border border-slate-600 bg-slate-700 text-white placeholder-slate-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                   placeholder="0.0+"
                   value={formData.turbidity}
                   onChange={(e) => setFormData(prev => ({ ...prev, turbidity: e.target.value }))}
@@ -202,7 +202,7 @@ export function Upload() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full flex justify-center items-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              className="w-full flex justify-center items-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-primary hover:bg-primary/80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
               {loading ? (
                 <>
