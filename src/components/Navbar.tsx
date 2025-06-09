@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { Droplets, LogOut, Menu, X } from 'lucide-react'
 import { useAuth } from '../hooks/useAuth'
 import { useState } from 'react'
+import logo from '../assets/logo.png'
 
 export function Navbar() {
   const { user, signOut } = useAuth()
@@ -30,7 +31,7 @@ export function Navbar() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors">
-              <Droplets className="h-8 w-8" />
+              <img src={logo} alt="Nephranet Logo" className="h-8 w-8 object-contain" />
               <span className="text-xl font-bold">NephraNet</span>
             </Link>
           </div>
