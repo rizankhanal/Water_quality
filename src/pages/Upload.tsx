@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { MapPin, TestTube, Droplets, Upload as UploadIcon, CheckCircle, AlertCircle } from 'lucide-react'
 import { useAuth } from '../hooks/useAuth'
 import { supabase } from '../lib/supabase'
+import logo from '../assets/logo.png'
 
 export function Upload() {
   const { user } = useAuth()
@@ -103,6 +104,9 @@ export function Upload() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
+          <div className="flex justify-center mb-6">
+            <img src={logo} alt="Nephranet Logo" className="h-20 w-20 object-contain" />
+          </div>
           <div className="flex justify-center mb-6">
             <div className="p-3 bg-blue-600/20 rounded-full">
               <UploadIcon className="h-12 w-12 text-blue-400" />
